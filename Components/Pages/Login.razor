@@ -1,0 +1,70 @@
+﻿@page "/login"
+@using Cashy.Models
+@inject Cashy.Services.UserService UserService
+@inject NavigationManager NavigationManager
+
+<div class="login-page-container">
+    <h2>Welcome back! Login</h2>
+
+    <EditForm Model="@user" OnValidSubmit="HandleLogin">
+        <!-- Validates the attributes and ensures the form is valid -->
+        <DataAnnotationsValidator />
+        <!-- Displays all validation errors in a summary -->
+        <ValidationSummary />
+
+        <!-- Username Field -->
+        <div class="login-form-group">
+            <label for="username">Username</label>
+            <InputText id="username" class="login-form-control" @bind-Value="user.Username" />
+            <ValidationMessage For="@(() => user.Username)" />
+        </div>
+
+        <!-- Password Field -->
+        <div class="login-form-group">
+            <label for="password">Password</label>
+            <InputText id="password" type="password" class="login-form-control" @bind-Value="user.Password" />
+            <ValidationMessage For="@(() => user.Password)" />
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" class="login-btn" disabled="@isSubmitting">Login</button>
+    </EditForm>
+
+    @if (!string.IsNullOrEmpty(message))
+    {
+        <p class="feedback-message">@message</p>
+    }
+</div>
+
+@code {
+    private User user = new User();
+    private bool isSubmitting = false;
+    private string? message;
+
+    private async Task HandleLogin()
+    {
+        isSubmitting = true;
+        try
+        {
+            var success = await UserService.LoginAsync(user);
+            if (success)
+            {
+                message = "Login successful!";
+                // Redirect to dashboard or another page
+                NavigationManager.NavigateTo("/");
+            }
+            else
+            {
+                message = "Invalid username or password.";
+            }
+        }
+        catch (Exception ex)
+        {
+            message = $"Error: {ex.Message}";
+        }
+        finally
+        {
+            isSubmitting = false;
+        }
+    }
+}

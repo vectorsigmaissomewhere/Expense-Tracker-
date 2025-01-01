@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.Logging;
+using Cashy.Services;
 
 namespace Cashy
 {
@@ -19,6 +20,9 @@ namespace Cashy
 #if DEBUG
     		builder.Services.AddBlazorWebViewDeveloperTools();
     		builder.Logging.AddDebug();
+            builder.Services.AddSingleton(sp => new SQLiteDatabase(FileAccessHelper.GetLocalFilePath("app.db")));
+            builder.Services.AddSingleton<UserService>();
+
 #endif
 
             return builder.Build();

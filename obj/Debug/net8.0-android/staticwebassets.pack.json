@@ -17,6 +17,10 @@
       "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css.map"
     },
     {
+      "Id": "D:\\Disk D Documents\\Cashy\\wwwroot\\css\\styles.css",
+      "PackagePath": "staticwebassets\\css\\styles.css"
+    },
+    {
       "Id": "D:\\Disk D Documents\\Cashy\\wwwroot\\favicon.png",
       "PackagePath": "staticwebassets\\favicon.png"
     },

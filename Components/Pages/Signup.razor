@@ -1,0 +1,75 @@
+﻿@page "/signup"
+@using Cashy.Models
+@inject Cashy.Services.UserService UserService
+
+<div class="signup-page-container">
+    <h2>Sign Up</h2>
+
+    <EditForm Model="@user" OnValidSubmit="HandleSignUp">
+        <DataAnnotationsValidator />
+        <ValidationSummary />
+
+        <!-- Username Field -->
+        <div class="signup-form-group">
+            <label for="username">Username</label>
+            <InputText id="username" class="signup-form-control" @bind-Value="user.Username" />
+            <ValidationMessage For="@(() => user.Username)" /> <!--Listens validation for username field-->
+        </div>
+
+        <!-- Password Field -->
+        <div class="signup-form-group">
+            <label for="password">Password</label>
+            <InputText id="password" type="password" class="signup-form-control" @bind-Value="user.Password" />
+            <ValidationMessage For="@(() => user.Password)" /> <!--Listens validation for password field-->
+        </div>
+
+        <!-- Currency Type Field -->
+        <div class="signup-form-group">
+            <label for="currencyType">Currency Type</label>
+            <select id="currencyType" class="signup-form-control" @bind="user.CurrencyType">
+                <option value="" disabled>Select Currency</option>
+                @foreach (var currency in currencies)
+                {
+                    <option value="@currency">@currency</option>
+                }
+            </select>
+            <ValidationMessage For="@(() => user.CurrencyType)" />
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" class="signup-btn" disabled="@isSubmitting">Sign Up</button>
+    </EditForm>
+
+    @if (message != null)
+    {
+        <p class="feedback-message">@message</p>
+    }
+</div>
+
+@code {
+    private User user = new User();
+    private List<string> currencies = new()
+    {
+        "USD", "EUR", "GBP", "NPR", "INR", "AUD", "CAD", "JPY", "CNY", "CHF", "MXN", "BRL", "RUB", "ZAR", "NZD", "SEK", "NOK", "DKK", "KRW", "SGD", "MYR", "THB", "PHP", "TRY", "SAR", "AED", "EGP", "PKR", "IDR", "VND", "CLP", "HUF", "PLN", "CZK", "RSD", "UAH", "ILS", "MAD", "KES", "BDT", "LAK", "LKR", "MMK", "NGN", "PEN", "KWD", "OMR", "BHD", "QAR", "AFN", "MNT", "ISK", "MDL", "LKR", "BWP", "XOF", "XPF"
+    };
+    private bool isSubmitting = false;
+    private string? message;
+
+    private async Task HandleSignUp()
+    {
+        isSubmitting = true;
+        try
+        {
+            var success = await UserService.SignUpAsync(user);
+            var dbPath = FileAccessHelper.GetLocalFilePath("app.db");
+        }
+        catch (Exception ex)
+        {
+            message = $"Error: {ex.Message}";
+        }
+        finally
+        {
+            isSubmitting = false;
+        }
+    }
+}

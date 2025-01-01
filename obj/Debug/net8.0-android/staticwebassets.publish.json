@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Qx9IeV+fIRpOHjQcFt851EOen8WnTXqdCHAHWOxKuB4=",
+  "Hash": "auyS/BF0OoHYXFwMGXviHhUNe64P79624LLprNMkvWI=",
   "Source": "Cashy",
   "BasePath": "/",
   "Mode": "Root",
@@ -110,6 +110,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Identity": "D:\\Disk D Documents\\Cashy\\wwwroot\\css\\styles.css",
+      "SourceId": "Cashy",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Disk D Documents\\Cashy\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "css/styles.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\styles.css"
     },
     {
       "Identity": "D:\\Disk D Documents\\Cashy\\wwwroot\\favicon.png",
