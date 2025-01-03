@@ -1,15 +1,14 @@
 ﻿@page "/login"
 @using Cashy.Models
 @inject Cashy.Services.UserService UserService
+@inject Cashy.Services.SessionService SessionService
 @inject NavigationManager NavigationManager
 
 <div class="login-page-container">
     <h2>Welcome back! Login</h2>
 
     <EditForm Model="@user" OnValidSubmit="HandleLogin">
-        <!-- Validates the attributes and ensures the form is valid -->
         <DataAnnotationsValidator />
-        <!-- Displays all validation errors in a summary -->
         <ValidationSummary />
 
         <!-- Username Field -->
@@ -50,8 +49,13 @@
             if (success)
             {
                 message = "Login successful!";
+
+                // Store user session in localStorage
+                //await SessionService.SetSessionData("username", user.Username);
+                //await SessionService.SetSessionData("userToken", "YourAccessToken");  // Replace with real token from backend
+
                 // Redirect to dashboard or another page
-                NavigationManager.NavigateTo("/");
+                NavigationManager.NavigateTo("/dashboard");
             }
             else
             {

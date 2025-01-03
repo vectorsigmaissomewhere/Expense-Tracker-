@@ -1,4 +1,6 @@
 ﻿@inherits LayoutComponentBase
+@inject Cashy.Services.SessionService SessionService
+@inject NavigationManager NavigationManager
 
 <div class="page">
     <div class="sidebar">
@@ -8,20 +10,25 @@
     <main>
         <div class="top-row px-4">
             <a href="https://learn.microsoft.com/aspnet/core/" target="_blank">About</a>
-            <!-- Link to the SignUp Page -->
-            <NavLink class="nav-link" href="/signup">
-                Sign Up
-            </NavLink>
-            <NavLink class="nav-link" href="/login">
-                Login
-            </NavLink>
+            <NavLink class="nav-link" href="/signup">Sign Up</NavLink>
+            <NavLink class="nav-link" href="/login">Login</NavLink>
+            <NavLink class="nav-link" @onclick="HandleLogout">Logout</NavLink>
         </div>
-        <div>
-            <!-- Any other content -->
-        </div>
-        <article class="content px-4">
-            @Body
-        </article>
+        <div><!-- Any other content --></div>
+        <article class="content px-4">@Body</article>
     </main>
 </div>
+
+@code {
+    private async Task HandleLogout()
+    {
+        // Clear session data
+        //await SessionService.RemoveSessionData("username");
+        //await SessionService.RemoveSessionData("userToken");
+
+        // Redirect to login page after logout
+        NavigationManager.NavigateTo("/login");
+    }
+}
+
 

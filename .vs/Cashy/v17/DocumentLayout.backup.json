@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "D:\\Disk D Documents\\Cashy\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{09880002-0DC3-4B2D-BBF5-7CD93DA990EE}|Cashy.csproj|d:\\disk d documents\\cashy\\components\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{09880002-0DC3-4B2D-BBF5-7CD93DA990EE}|Cashy.csproj|solutionrelative:components\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{09880002-0DC3-4B2D-BBF5-7CD93DA990EE}|Cashy.csproj|d:\\disk d documents\\cashy\\components\\pages\\login.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{09880002-0DC3-4B2D-BBF5-7CD93DA990EE}|Cashy.csproj|solutionrelative:components\\pages\\login.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -11,52 +15,8 @@
       "RelativeMoniker": "D:0:0:{09880002-0DC3-4B2D-BBF5-7CD93DA990EE}|Cashy.csproj|solutionrelative:components\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{09880002-0DC3-4B2D-BBF5-7CD93DA990EE}|Cashy.csproj|d:\\disk d documents\\cashy\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{09880002-0DC3-4B2D-BBF5-7CD93DA990EE}|Cashy.csproj|solutionrelative:models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{09880002-0DC3-4B2D-BBF5-7CD93DA990EE}|Cashy.csproj|d:\\disk d documents\\cashy\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{09880002-0DC3-4B2D-BBF5-7CD93DA990EE}|Cashy.csproj|solutionrelative:services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{09880002-0DC3-4B2D-BBF5-7CD93DA990EE}|Cashy.csproj|d:\\disk d documents\\cashy\\services\\fileaccesshelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{09880002-0DC3-4B2D-BBF5-7CD93DA990EE}|Cashy.csproj|solutionrelative:services\\fileaccesshelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{09880002-0DC3-4B2D-BBF5-7CD93DA990EE}|Cashy.csproj|d:\\disk d documents\\cashy\\components\\pages\\signup.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{09880002-0DC3-4B2D-BBF5-7CD93DA990EE}|Cashy.csproj|solutionrelative:components\\pages\\signup.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{09880002-0DC3-4B2D-BBF5-7CD93DA990EE}|Cashy.csproj|d:\\disk d documents\\cashy\\components\\pages\\counter.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{09880002-0DC3-4B2D-BBF5-7CD93DA990EE}|Cashy.csproj|solutionrelative:components\\pages\\counter.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{09880002-0DC3-4B2D-BBF5-7CD93DA990EE}|Cashy.csproj|d:\\disk d documents\\cashy\\data\\sqlitedatabase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{09880002-0DC3-4B2D-BBF5-7CD93DA990EE}|Cashy.csproj|solutionrelative:data\\sqlitedatabase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{09880002-0DC3-4B2D-BBF5-7CD93DA990EE}|Cashy.csproj|d:\\disk d documents\\cashy\\components\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{09880002-0DC3-4B2D-BBF5-7CD93DA990EE}|Cashy.csproj|solutionrelative:components\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{09880002-0DC3-4B2D-BBF5-7CD93DA990EE}|Cashy.csproj|d:\\disk d documents\\cashy\\mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{09880002-0DC3-4B2D-BBF5-7CD93DA990EE}|Cashy.csproj|solutionrelative:mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{09880002-0DC3-4B2D-BBF5-7CD93DA990EE}|Cashy.csproj|d:\\disk d documents\\cashy\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{09880002-0DC3-4B2D-BBF5-7CD93DA990EE}|Cashy.csproj|solutionrelative:app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{09880002-0DC3-4B2D-BBF5-7CD93DA990EE}|Cashy.csproj|d:\\disk d documents\\cashy\\components\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{09880002-0DC3-4B2D-BBF5-7CD93DA990EE}|Cashy.csproj|solutionrelative:components\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{09880002-0DC3-4B2D-BBF5-7CD93DA990EE}|Cashy.csproj|d:\\disk d documents\\cashy\\models\\debt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{09880002-0DC3-4B2D-BBF5-7CD93DA990EE}|Cashy.csproj|solutionrelative:models\\debt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{09880002-0DC3-4B2D-BBF5-7CD93DA990EE}|Cashy.csproj|d:\\disk d documents\\cashy\\wwwroot\\css\\app.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{09880002-0DC3-4B2D-BBF5-7CD93DA990EE}|Cashy.csproj|solutionrelative:wwwroot\\css\\app.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{09880002-0DC3-4B2D-BBF5-7CD93DA990EE}|Cashy.csproj|d:\\disk d documents\\cashy\\services\\sessionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{09880002-0DC3-4B2D-BBF5-7CD93DA990EE}|Cashy.csproj|solutionrelative:services\\sessionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -86,178 +46,55 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
+              "Title": "SessionService.cs",
+              "DocumentMoniker": "D:\\Disk D Documents\\Cashy\\Services\\SessionService.cs",
+              "RelativeDocumentMoniker": "Services\\SessionService.cs",
+              "ToolTip": "D:\\Disk D Documents\\Cashy\\Services\\SessionService.cs",
+              "RelativeToolTip": "Services\\SessionService.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAAwCcAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-03T12:29:36.055Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Home.razor",
               "DocumentMoniker": "D:\\Disk D Documents\\Cashy\\Components\\Pages\\Home.razor",
               "RelativeDocumentMoniker": "Components\\Pages\\Home.razor",
               "ToolTip": "D:\\Disk D Documents\\Cashy\\Components\\Pages\\Home.razor",
               "RelativeToolTip": "Components\\Pages\\Home.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-31T23:24:31.775Z",
+              "WhenOpened": "2025-01-03T12:10:13.405Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "MainLayout.razor",
-              "DocumentMoniker": "D:\\Disk D Documents\\Cashy\\Components\\Layout\\MainLayout.razor",
-              "RelativeDocumentMoniker": "Components\\Layout\\MainLayout.razor",
-              "ToolTip": "D:\\Disk D Documents\\Cashy\\Components\\Layout\\MainLayout.razor",
-              "RelativeToolTip": "Components\\Layout\\MainLayout.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-31T23:23:54.414Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "User.cs",
-              "DocumentMoniker": "D:\\Disk D Documents\\Cashy\\Models\\User.cs",
-              "RelativeDocumentMoniker": "Models\\User.cs",
-              "ToolTip": "D:\\Disk D Documents\\Cashy\\Models\\User.cs",
-              "RelativeToolTip": "Models\\User.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAA8AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-31T09:35:34.854Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Login.razor",
               "DocumentMoniker": "D:\\Disk D Documents\\Cashy\\Components\\Pages\\Login.razor",
               "RelativeDocumentMoniker": "Components\\Pages\\Login.razor",
               "ToolTip": "D:\\Disk D Documents\\Cashy\\Components\\Pages\\Login.razor",
               "RelativeToolTip": "Components\\Pages\\Login.razor",
-              "ViewState": "AgIAACQAAAAAAAAAAAAAADUAAAAvAAAAAAAAAA==",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAACgAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-01T13:00:03.258Z",
+              "WhenOpened": "2025-01-03T12:10:20.031Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "UserService.cs",
-              "DocumentMoniker": "D:\\Disk D Documents\\Cashy\\Services\\UserService.cs",
-              "RelativeDocumentMoniker": "Services\\UserService.cs",
-              "ToolTip": "D:\\Disk D Documents\\Cashy\\Services\\UserService.cs",
-              "RelativeToolTip": "Services\\UserService.cs",
-              "ViewState": "AgIAACwAAAAAAAAAAAAqwDUAAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-31T23:14:09.833Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "FileAccessHelper.cs",
-              "DocumentMoniker": "D:\\Disk D Documents\\Cashy\\Services\\FileAccessHelper.cs",
-              "RelativeDocumentMoniker": "Services\\FileAccessHelper.cs",
-              "ToolTip": "D:\\Disk D Documents\\Cashy\\Services\\FileAccessHelper.cs",
-              "RelativeToolTip": "Services\\FileAccessHelper.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAmwA4AAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-01T12:57:12.069Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Signup.razor",
-              "DocumentMoniker": "D:\\Disk D Documents\\Cashy\\Components\\Pages\\Signup.razor",
-              "RelativeDocumentMoniker": "Components\\Pages\\Signup.razor",
-              "ToolTip": "D:\\Disk D Documents\\Cashy\\Components\\Pages\\Signup.razor",
-              "RelativeToolTip": "Components\\Pages\\Signup.razor",
-              "ViewState": "AgIAACEAAAAAAAAAAAAAACQAAAAOAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "MainLayout.razor",
+              "DocumentMoniker": "D:\\Disk D Documents\\Cashy\\Components\\Layout\\MainLayout.razor",
+              "RelativeDocumentMoniker": "Components\\Layout\\MainLayout.razor",
+              "ToolTip": "D:\\Disk D Documents\\Cashy\\Components\\Layout\\MainLayout.razor",
+              "RelativeToolTip": "Components\\Layout\\MainLayout.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-31T12:14:02.379Z",
+              "WhenOpened": "2025-01-03T12:17:57.083Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "SQLiteDatabase.cs",
-              "DocumentMoniker": "D:\\Disk D Documents\\Cashy\\Data\\SQLiteDatabase.cs",
-              "RelativeDocumentMoniker": "Data\\SQLiteDatabase.cs",
-              "ToolTip": "D:\\Disk D Documents\\Cashy\\Data\\SQLiteDatabase.cs",
-              "RelativeToolTip": "Data\\SQLiteDatabase.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-31T23:11:50.204Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "MauiProgram.cs",
-              "DocumentMoniker": "D:\\Disk D Documents\\Cashy\\MauiProgram.cs",
-              "RelativeDocumentMoniker": "MauiProgram.cs",
-              "ToolTip": "D:\\Disk D Documents\\Cashy\\MauiProgram.cs",
-              "RelativeToolTip": "MauiProgram.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAQwBcAAAA5AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-31T23:26:54.66Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Counter.razor",
-              "DocumentMoniker": "D:\\Disk D Documents\\Cashy\\Components\\Pages\\Counter.razor",
-              "RelativeDocumentMoniker": "Components\\Pages\\Counter.razor",
-              "ToolTip": "D:\\Disk D Documents\\Cashy\\Components\\Pages\\Counter.razor",
-              "RelativeToolTip": "Components\\Pages\\Counter.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-01T15:05:21.277Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "App.xaml",
-              "DocumentMoniker": "D:\\Disk D Documents\\Cashy\\App.xaml",
-              "RelativeDocumentMoniker": "App.xaml",
-              "ToolTip": "D:\\Disk D Documents\\Cashy\\App.xaml",
-              "RelativeToolTip": "App.xaml",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-12-31T23:38:27.367Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "NavMenu.razor",
-              "DocumentMoniker": "D:\\Disk D Documents\\Cashy\\Components\\Layout\\NavMenu.razor",
-              "RelativeDocumentMoniker": "Components\\Layout\\NavMenu.razor",
-              "ToolTip": "D:\\Disk D Documents\\Cashy\\Components\\Layout\\NavMenu.razor",
-              "RelativeToolTip": "Components\\Layout\\NavMenu.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-31T11:38:35.619Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Debt.cs",
-              "DocumentMoniker": "D:\\Disk D Documents\\Cashy\\Models\\Debt.cs",
-              "RelativeDocumentMoniker": "Models\\Debt.cs",
-              "ToolTip": "D:\\Disk D Documents\\Cashy\\Models\\Debt.cs",
-              "RelativeToolTip": "Models\\Debt.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-31T09:39:13.414Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "app.css",
-              "DocumentMoniker": "D:\\Disk D Documents\\Cashy\\wwwroot\\css\\app.css",
-              "RelativeDocumentMoniker": "wwwroot\\css\\app.css",
-              "ToolTip": "D:\\Disk D Documents\\Cashy\\wwwroot\\css\\app.css",
-              "RelativeToolTip": "wwwroot\\css\\app.css",
-              "ViewState": "AgIAADAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-12-31T12:27:25.447Z"
             }
           ]
         }

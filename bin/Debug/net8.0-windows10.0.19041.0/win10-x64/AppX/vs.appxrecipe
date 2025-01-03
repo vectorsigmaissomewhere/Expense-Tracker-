@@ -30,7 +30,7 @@
     <AppXManifest Include="D:\Disk D Documents\Cashy\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2025-01-01T15:16:15.044</Modified>
+      <Modified>2025-01-03T13:11:52.921</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
@@ -44,11 +44,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Disk D Documents\Cashy\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Cashy.dll">
       <PackagePath>Cashy.dll</PackagePath>
-      <Modified>2025-01-01T15:16:14.465</Modified>
+      <Modified>2025-01-03T13:11:52.171</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Disk D Documents\Cashy\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>Cashy.exe</PackagePath>
-      <Modified>2025-01-01T15:16:14.481</Modified>
+      <Modified>2025-01-03T13:11:52.203</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Disk D Documents\Cashy\Resources\Raw\AboutAssets.txt">
       <PackagePath>AboutAssets.txt</PackagePath>
