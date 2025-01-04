@@ -20,7 +20,7 @@ else
         try
         {
             // Retrieve the username from the session storage
-            //username = await SessionService.GetSessionData("username");
+            username = await SessionService.GetSessionData("username");
 
             // Handle cases where session data is not available
             if (string.IsNullOrEmpty(username))

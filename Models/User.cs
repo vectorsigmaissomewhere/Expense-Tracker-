@@ -1,5 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
-using SQLite;
+﻿using SQLite;
+using System.ComponentModel.DataAnnotations;
 
 namespace Cashy.Models
 {

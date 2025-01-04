@@ -30,25 +30,25 @@
     <AppXManifest Include="D:\Disk D Documents\Cashy\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2025-01-03T13:11:52.921</Modified>
+      <Modified>2025-01-04T03:53:48.902</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="D:\Disk D Documents\Cashy\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2024-12-31T23:26:09.807</Modified>
+      <Modified>2025-01-04T01:34:47.303</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Disk D Documents\Cashy\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Cashy.runtimeconfig.json">
       <PackagePath>Cashy.runtimeconfig.json</PackagePath>
-      <Modified>2024-12-31T23:26:08.994</Modified>
+      <Modified>2025-01-04T01:34:46.317</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Disk D Documents\Cashy\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Cashy.dll">
       <PackagePath>Cashy.dll</PackagePath>
-      <Modified>2025-01-03T13:11:52.171</Modified>
+      <Modified>2025-01-04T03:42:50.444</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Disk D Documents\Cashy\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>Cashy.exe</PackagePath>
-      <Modified>2025-01-03T13:11:52.203</Modified>
+      <Modified>2025-01-04T03:42:50.466</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Disk D Documents\Cashy\Resources\Raw\AboutAssets.txt">
       <PackagePath>AboutAssets.txt</PackagePath>
@@ -80,23 +80,23 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Disk D Documents\Cashy\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-100.png">
       <PackagePath>splashSplashScreen.scale-100.png</PackagePath>
-      <Modified>2024-12-31T07:16:42.125</Modified>
+      <Modified>2025-01-04T01:34:40.845</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Disk D Documents\Cashy\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-125.png">
       <PackagePath>splashSplashScreen.scale-125.png</PackagePath>
-      <Modified>2024-12-31T07:16:42.169</Modified>
+      <Modified>2025-01-04T01:34:40.879</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Disk D Documents\Cashy\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-150.png">
       <PackagePath>splashSplashScreen.scale-150.png</PackagePath>
-      <Modified>2024-12-31T07:16:42.218</Modified>
+      <Modified>2025-01-04T01:34:40.920</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Disk D Documents\Cashy\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-200.png">
       <PackagePath>splashSplashScreen.scale-200.png</PackagePath>
-      <Modified>2024-12-31T07:16:42.284</Modified>
+      <Modified>2025-01-04T01:34:40.987</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Disk D Documents\Cashy\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-400.png">
       <PackagePath>splashSplashScreen.scale-400.png</PackagePath>
-      <Modified>2024-12-31T07:16:42.573</Modified>
+      <Modified>2025-01-04T01:34:41.279</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Disk D Documents\Cashy\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\f\OpenSans-Regular.ttf">
       <PackagePath>OpenSans-Regular.ttf</PackagePath>
@@ -104,211 +104,211 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Disk D Documents\Cashy\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appicon.ico">
       <PackagePath>appicon.ico</PackagePath>
-      <Modified>2024-12-31T07:16:44.132</Modified>
+      <Modified>2025-01-04T01:34:43.221</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Disk D Documents\Cashy\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-100.png">
       <PackagePath>appiconLargeTile.scale-100.png</PackagePath>
-      <Modified>2024-12-31T07:16:44.116</Modified>
+      <Modified>2025-01-04T01:34:43.213</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Disk D Documents\Cashy\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-125.png">
       <PackagePath>appiconLargeTile.scale-125.png</PackagePath>
-      <Modified>2024-12-31T07:16:44.116</Modified>
+      <Modified>2025-01-04T01:34:43.213</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Disk D Documents\Cashy\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-150.png">
       <PackagePath>appiconLargeTile.scale-150.png</PackagePath>
-      <Modified>2024-12-31T07:16:44.116</Modified>
+      <Modified>2025-01-04T01:34:43.213</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Disk D Documents\Cashy\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-200.png">
       <PackagePath>appiconLargeTile.scale-200.png</PackagePath>
-      <Modified>2024-12-31T07:16:44.116</Modified>
+      <Modified>2025-01-04T01:34:43.212</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Disk D Documents\Cashy\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-400.png">
       <PackagePath>appiconLargeTile.scale-400.png</PackagePath>
-      <Modified>2024-12-31T07:16:44.116</Modified>
+      <Modified>2025-01-04T01:34:43.212</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Disk D Documents\Cashy\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-16.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-16.png</PackagePath>
-      <Modified>2024-12-31T07:16:44.124</Modified>
+      <Modified>2025-01-04T01:34:43.221</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Disk D Documents\Cashy\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-24.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-24.png</PackagePath>
-      <Modified>2024-12-31T07:16:44.124</Modified>
+      <Modified>2025-01-04T01:34:43.221</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Disk D Documents\Cashy\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-256.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-256.png</PackagePath>
-      <Modified>2024-12-31T07:16:44.124</Modified>
+      <Modified>2025-01-04T01:34:43.213</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Disk D Documents\Cashy\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-32.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-32.png</PackagePath>
-      <Modified>2024-12-31T07:16:44.124</Modified>
+      <Modified>2025-01-04T01:34:43.221</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Disk D Documents\Cashy\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-48.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-48.png</PackagePath>
-      <Modified>2024-12-31T07:16:44.124</Modified>
+      <Modified>2025-01-04T01:34:43.213</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Disk D Documents\Cashy\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-16.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-16.png</PackagePath>
-      <Modified>2024-12-31T07:16:44.124</Modified>
+      <Modified>2025-01-04T01:34:43.221</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Disk D Documents\Cashy\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-24.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-24.png</PackagePath>
-      <Modified>2024-12-31T07:16:44.124</Modified>
+      <Modified>2025-01-04T01:34:43.221</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Disk D Documents\Cashy\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-256.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-256.png</PackagePath>
-      <Modified>2024-12-31T07:16:44.124</Modified>
+      <Modified>2025-01-04T01:34:43.221</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Disk D Documents\Cashy\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-32.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-32.png</PackagePath>
-      <Modified>2024-12-31T07:16:44.124</Modified>
+      <Modified>2025-01-04T01:34:43.221</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Disk D Documents\Cashy\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-48.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-48.png</PackagePath>
-      <Modified>2024-12-31T07:16:44.124</Modified>
+      <Modified>2025-01-04T01:34:43.221</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Disk D Documents\Cashy\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-100.png">
       <PackagePath>appiconLogo.scale-100.png</PackagePath>
-      <Modified>2024-12-31T07:16:44.132</Modified>
+      <Modified>2025-01-04T01:34:43.221</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Disk D Documents\Cashy\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-125.png">
       <PackagePath>appiconLogo.scale-125.png</PackagePath>
-      <Modified>2024-12-31T07:16:44.132</Modified>
+      <Modified>2025-01-04T01:34:43.221</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Disk D Documents\Cashy\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-150.png">
       <PackagePath>appiconLogo.scale-150.png</PackagePath>
-      <Modified>2024-12-31T07:16:44.132</Modified>
+      <Modified>2025-01-04T01:34:43.221</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Disk D Documents\Cashy\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-200.png">
       <PackagePath>appiconLogo.scale-200.png</PackagePath>
-      <Modified>2024-12-31T07:16:44.132</Modified>
+      <Modified>2025-01-04T01:34:43.221</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Disk D Documents\Cashy\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-400.png">
       <PackagePath>appiconLogo.scale-400.png</PackagePath>
-      <Modified>2024-12-31T07:16:44.132</Modified>
+      <Modified>2025-01-04T01:34:43.221</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Disk D Documents\Cashy\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-16.png">
       <PackagePath>appiconLogo.targetsize-16.png</PackagePath>
-      <Modified>2024-12-31T07:16:44.132</Modified>
+      <Modified>2025-01-04T01:34:43.221</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Disk D Documents\Cashy\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-24.png">
       <PackagePath>appiconLogo.targetsize-24.png</PackagePath>
-      <Modified>2024-12-31T07:16:44.132</Modified>
+      <Modified>2025-01-04T01:34:43.221</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Disk D Documents\Cashy\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-256.png">
       <PackagePath>appiconLogo.targetsize-256.png</PackagePath>
-      <Modified>2024-12-31T07:16:44.124</Modified>
+      <Modified>2025-01-04T01:34:43.221</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Disk D Documents\Cashy\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-32.png">
       <PackagePath>appiconLogo.targetsize-32.png</PackagePath>
-      <Modified>2024-12-31T07:16:44.132</Modified>
+      <Modified>2025-01-04T01:34:43.221</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Disk D Documents\Cashy\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-48.png">
       <PackagePath>appiconLogo.targetsize-48.png</PackagePath>
-      <Modified>2024-12-31T07:16:44.124</Modified>
+      <Modified>2025-01-04T01:34:43.221</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Disk D Documents\Cashy\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-100.png">
       <PackagePath>appiconMediumTile.scale-100.png</PackagePath>
-      <Modified>2024-12-31T07:16:44.124</Modified>
+      <Modified>2025-01-04T01:34:43.213</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Disk D Documents\Cashy\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-125.png">
       <PackagePath>appiconMediumTile.scale-125.png</PackagePath>
-      <Modified>2024-12-31T07:16:44.124</Modified>
+      <Modified>2025-01-04T01:34:43.213</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Disk D Documents\Cashy\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-150.png">
       <PackagePath>appiconMediumTile.scale-150.png</PackagePath>
-      <Modified>2024-12-31T07:16:44.124</Modified>
+      <Modified>2025-01-04T01:34:43.213</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Disk D Documents\Cashy\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-200.png">
       <PackagePath>appiconMediumTile.scale-200.png</PackagePath>
-      <Modified>2024-12-31T07:16:44.124</Modified>
+      <Modified>2025-01-04T01:34:43.213</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Disk D Documents\Cashy\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-400.png">
       <PackagePath>appiconMediumTile.scale-400.png</PackagePath>
-      <Modified>2024-12-31T07:16:44.124</Modified>
+      <Modified>2025-01-04T01:34:43.213</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Disk D Documents\Cashy\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-100.png">
       <PackagePath>appiconSmallTile.scale-100.png</PackagePath>
-      <Modified>2024-12-31T07:16:44.124</Modified>
+      <Modified>2025-01-04T01:34:43.213</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Disk D Documents\Cashy\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-125.png">
       <PackagePath>appiconSmallTile.scale-125.png</PackagePath>
-      <Modified>2024-12-31T07:16:44.124</Modified>
+      <Modified>2025-01-04T01:34:43.213</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Disk D Documents\Cashy\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-150.png">
       <PackagePath>appiconSmallTile.scale-150.png</PackagePath>
-      <Modified>2024-12-31T07:16:44.124</Modified>
+      <Modified>2025-01-04T01:34:43.213</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Disk D Documents\Cashy\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-200.png">
       <PackagePath>appiconSmallTile.scale-200.png</PackagePath>
-      <Modified>2024-12-31T07:16:44.124</Modified>
+      <Modified>2025-01-04T01:34:43.213</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Disk D Documents\Cashy\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-400.png">
       <PackagePath>appiconSmallTile.scale-400.png</PackagePath>
-      <Modified>2024-12-31T07:16:44.124</Modified>
+      <Modified>2025-01-04T01:34:43.213</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Disk D Documents\Cashy\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-100.png">
       <PackagePath>appiconStoreLogo.scale-100.png</PackagePath>
-      <Modified>2024-12-31T07:16:44.124</Modified>
+      <Modified>2025-01-04T01:34:43.213</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Disk D Documents\Cashy\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-125.png">
       <PackagePath>appiconStoreLogo.scale-125.png</PackagePath>
-      <Modified>2024-12-31T07:16:44.124</Modified>
+      <Modified>2025-01-04T01:34:43.213</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Disk D Documents\Cashy\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-150.png">
       <PackagePath>appiconStoreLogo.scale-150.png</PackagePath>
-      <Modified>2024-12-31T07:16:44.124</Modified>
+      <Modified>2025-01-04T01:34:43.213</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Disk D Documents\Cashy\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-200.png">
       <PackagePath>appiconStoreLogo.scale-200.png</PackagePath>
-      <Modified>2024-12-31T07:16:44.124</Modified>
+      <Modified>2025-01-04T01:34:43.213</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Disk D Documents\Cashy\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-400.png">
       <PackagePath>appiconStoreLogo.scale-400.png</PackagePath>
-      <Modified>2024-12-31T07:16:44.124</Modified>
+      <Modified>2025-01-04T01:34:43.213</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Disk D Documents\Cashy\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-100.png">
       <PackagePath>appiconWideTile.scale-100.png</PackagePath>
-      <Modified>2024-12-31T07:16:44.124</Modified>
+      <Modified>2025-01-04T01:34:43.213</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Disk D Documents\Cashy\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-125.png">
       <PackagePath>appiconWideTile.scale-125.png</PackagePath>
-      <Modified>2024-12-31T07:16:44.124</Modified>
+      <Modified>2025-01-04T01:34:43.213</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Disk D Documents\Cashy\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-150.png">
       <PackagePath>appiconWideTile.scale-150.png</PackagePath>
-      <Modified>2024-12-31T07:16:44.124</Modified>
+      <Modified>2025-01-04T01:34:43.213</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Disk D Documents\Cashy\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-200.png">
       <PackagePath>appiconWideTile.scale-200.png</PackagePath>
-      <Modified>2024-12-31T07:16:44.124</Modified>
+      <Modified>2025-01-04T01:34:43.213</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Disk D Documents\Cashy\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-400.png">
       <PackagePath>appiconWideTile.scale-400.png</PackagePath>
-      <Modified>2024-12-31T07:16:44.116</Modified>
+      <Modified>2025-01-04T01:34:43.213</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Disk D Documents\Cashy\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-100.png">
       <PackagePath>dotnet_bot.scale-100.png</PackagePath>
-      <Modified>2024-12-31T07:16:44.132</Modified>
+      <Modified>2025-01-04T01:34:43.221</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Disk D Documents\Cashy\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-125.png">
       <PackagePath>dotnet_bot.scale-125.png</PackagePath>
-      <Modified>2024-12-31T07:16:44.132</Modified>
+      <Modified>2025-01-04T01:34:43.221</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Disk D Documents\Cashy\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-150.png">
       <PackagePath>dotnet_bot.scale-150.png</PackagePath>
-      <Modified>2024-12-31T07:16:44.132</Modified>
+      <Modified>2025-01-04T01:34:43.221</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Disk D Documents\Cashy\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-200.png">
       <PackagePath>dotnet_bot.scale-200.png</PackagePath>
-      <Modified>2024-12-31T07:16:44.132</Modified>
+      <Modified>2025-01-04T01:34:43.221</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Disk D Documents\Cashy\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-400.png">
       <PackagePath>dotnet_bot.scale-400.png</PackagePath>
-      <Modified>2024-12-31T07:16:44.132</Modified>
+      <Modified>2025-01-04T01:34:43.221</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Disk D Documents\Cashy\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Cashy.deps.json">
       <PackagePath>Cashy.deps.json</PackagePath>
-      <Modified>2024-12-31T23:26:08.666</Modified>
+      <Modified>2025-01-04T01:34:46.158</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\pc\.nuget\packages\microsoft.windows.sdk.net.ref\10.0.19041.34\lib\net6.0\Microsoft.Windows.SDK.NET.dll">
       <PackagePath>Microsoft.Windows.SDK.NET.dll</PackagePath>
@@ -700,11 +700,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Disk D Documents\Cashy\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\scopedcss\bundle\Cashy.styles.css">
       <PackagePath>wwwroot\Cashy.styles.css</PackagePath>
-      <Modified>2024-12-31T07:16:38.389</Modified>
+      <Modified>2025-01-04T01:34:15.416</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Disk D Documents\Cashy\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\scopedcss\projectbundle\Cashy.bundle.scp.css">
       <PackagePath>wwwroot\Cashy.bundle.scp.css</PackagePath>
-      <Modified>2024-12-31T07:16:38.389</Modified>
+      <Modified>2025-01-04T01:34:15.416</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Disk D Documents\Cashy\Components\Layout\MainLayout.razor.css">
       <PackagePath>Components\Layout\MainLayout.razor.css</PackagePath>

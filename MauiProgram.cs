@@ -1,5 +1,5 @@
-﻿using Microsoft.Extensions.Logging;
-using Cashy.Services;
+﻿using Cashy.Services;
+using Microsoft.Extensions.Logging;
 
 namespace Cashy
 {
@@ -18,8 +18,8 @@ namespace Cashy
             builder.Services.AddMauiBlazorWebView();
 
 #if DEBUG
-    		builder.Services.AddBlazorWebViewDeveloperTools();
-    		builder.Logging.AddDebug();
+            builder.Services.AddBlazorWebViewDeveloperTools();
+            builder.Logging.AddDebug();
             builder.Services.AddSingleton(sp => new SQLiteDatabase(FileAccessHelper.GetLocalFilePath("app.db")));
             builder.Services.AddSingleton<UserService>();
 

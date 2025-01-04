@@ -11,21 +11,18 @@
         <DataAnnotationsValidator />
         <ValidationSummary />
 
-        <!-- Username Field -->
         <div class="login-form-group">
             <label for="username">Username</label>
             <InputText id="username" class="login-form-control" @bind-Value="user.Username" />
             <ValidationMessage For="@(() => user.Username)" />
         </div>
 
-        <!-- Password Field -->
         <div class="login-form-group">
             <label for="password">Password</label>
             <InputText id="password" type="password" class="login-form-control" @bind-Value="user.Password" />
             <ValidationMessage For="@(() => user.Password)" />
         </div>
 
-        <!-- Submit Button -->
         <button type="submit" class="login-btn" disabled="@isSubmitting">Login</button>
     </EditForm>
 
@@ -49,12 +46,9 @@
             if (success)
             {
                 message = "Login successful!";
+                await SessionService.SetSessionData("username", user.Username);
+                await SessionService.SetSessionData("userToken", "YourAccessToken");
 
-                // Store user session in localStorage
-                //await SessionService.SetSessionData("username", user.Username);
-                //await SessionService.SetSessionData("userToken", "YourAccessToken");  // Replace with real token from backend
-
-                // Redirect to dashboard or another page
                 NavigationManager.NavigateTo("/dashboard");
             }
             else
