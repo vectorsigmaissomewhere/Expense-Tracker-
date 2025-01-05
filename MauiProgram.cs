@@ -17,13 +17,11 @@ namespace Cashy
 
             builder.Services.AddMauiBlazorWebView();
 
-#if DEBUG
             builder.Services.AddBlazorWebViewDeveloperTools();
             builder.Logging.AddDebug();
             builder.Services.AddSingleton(sp => new SQLiteDatabase(FileAccessHelper.GetLocalFilePath("app.db")));
             builder.Services.AddSingleton<UserService>();
-
-#endif
+            builder.Services.AddSingleton<TransactionService>();
 
             return builder.Build();
         }

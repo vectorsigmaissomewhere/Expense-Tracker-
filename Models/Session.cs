@@ -6,8 +6,6 @@ namespace Cashy.Models
     public class Session
     {
         [PrimaryKey, AutoIncrement]
-        public int Id { get; set; }
-        [AutoIncrement]
         public int SessionID { get; set; } 
         [StringLength(50)]
         public string Key { get; set; } = string.Empty;
