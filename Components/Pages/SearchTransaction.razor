@@ -1,0 +1,147 @@
+﻿@page "/search-transaction"
+@inject Cashy.Services.JsonService JsonService
+@using Cashy.Model
+
+<h3>Search Transactions</h3>
+
+<div>
+    <label>Type:</label>
+    <select @bind="SearchCriteria.Type">
+        <option value="">All</option>
+        <option value="Cashin">Cashin</option>
+        <option value="Cashout">Cashout</option>
+    </select>
+
+    <label>Tags:</label>
+    <input type="text" @bind="SearchCriteria.TagsInput" placeholder="Enter tags (comma separated)" />
+
+    <label>Start Date:</label>
+    <input type="date" @bind="SearchCriteria.StartDate" />
+
+    <label>End Date:</label>
+    <input type="date" @bind="SearchCriteria.EndDate" />
+
+    <label>Title:</label>
+    <input type="text" @bind="SearchCriteria.Title" placeholder="Search by title" />
+
+    <label>Sort Order:</label>
+    <select @bind="SortOrder">
+        <option value="Ascending">Ascending</option>
+        <option value="Descending">Descending</option>
+    </select>
+
+    <label>Sort By Date:</label>
+    <input type="checkbox" @bind="SortByDate" />
+
+    <button @onclick="Search">Search</button>
+</div>
+
+<div>
+    <h4>Filtered Transactions</h4>
+    @if (FilteredTransactions != null && FilteredTransactions.Any())
+    {
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Date</th>
+                    <th>Amount</th>
+                    <th>Tags</th>
+                    <th>Note</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var transaction in FilteredTransactions)
+                {
+                    <tr>
+                        <td><b>@transaction.Title</b></td>
+                        <td>@transaction.Date.ToShortDateString()</td>
+                        <td>@transaction.Amount.ToString("C")</td> <!-- Correct currency formatting -->
+                        <td>@string.Join(", ", transaction.Tags ?? new List<string>())</td>
+                        <td>@transaction.Note</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+    else
+    {
+        <p>No transactions found.</p>
+    }
+</div>
+
+
+@code {
+    private List<Transaction> Transactions = new();
+    private List<Transaction> FilteredTransactions = new();
+    private SearchCriteria SearchCriteria = new();
+    private string SortOrder = "Ascending";
+    private bool SortByDate = false;
+
+    protected override async Task OnInitializedAsync()
+    {
+        // Fetch data from JsonService
+        Transactions = await JsonService.ReadDataAsync<List<Transaction>>() ?? new List<Transaction>();
+        FilteredTransactions = Transactions;
+    }
+
+    private void Search()
+    {
+        FilteredTransactions = Transactions;
+
+        // Filter by Type
+        if (!string.IsNullOrEmpty(SearchCriteria.Type))
+        {
+            FilteredTransactions = FilteredTransactions
+                .Where(t => t.Type?.Equals(SearchCriteria.Type, StringComparison.OrdinalIgnoreCase) == true)
+                .ToList();
+        }
+
+        // Filter by Tags
+        if (!string.IsNullOrEmpty(SearchCriteria.TagsInput))
+        {
+            var tags = SearchCriteria.TagsInput.Split(',', StringSplitOptions.RemoveEmptyEntries)
+                                               .Select(tag => tag.Trim().ToLower()).ToList();
+            FilteredTransactions = FilteredTransactions
+                .Where(t => t.Tags != null && t.Tags.Any(tag => tags.Contains(tag.ToLower())))
+                .ToList();
+        }
+
+        // Filter by Date Range
+        if (SearchCriteria.StartDate.HasValue)
+        {
+            FilteredTransactions = FilteredTransactions
+                .Where(t => t.Date >= SearchCriteria.StartDate.Value)
+                .ToList();
+        }
+
+        if (SearchCriteria.EndDate.HasValue)
+        {
+            FilteredTransactions = FilteredTransactions
+                .Where(t => t.Date <= SearchCriteria.EndDate.Value)
+                .ToList();
+        }
+
+        // Filter by Title
+        if (!string.IsNullOrEmpty(SearchCriteria.Title))
+        {
+            FilteredTransactions = FilteredTransactions
+                .Where(t => t.Title != null && t.Title.Contains(SearchCriteria.Title, StringComparison.OrdinalIgnoreCase))
+                .ToList();
+        }
+
+        // Sort
+        if (SortByDate)
+        {
+            FilteredTransactions = SortOrder == "Ascending"
+                ? FilteredTransactions.OrderBy(t => t.Date).ToList()
+                : FilteredTransactions.OrderByDescending(t => t.Date).ToList();
+        }
+        else
+        {
+            FilteredTransactions = SortOrder == "Ascending"
+                ? FilteredTransactions.OrderBy(t => t.Title).ToList()
+                : FilteredTransactions.OrderByDescending(t => t.Title).ToList();
+        }
+    }
+}

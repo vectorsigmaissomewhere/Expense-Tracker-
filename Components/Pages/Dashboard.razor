@@ -1,0 +1,298 @@
+﻿@page "/"
+@inject Cashy.Services.JsonService JsonService
+@inject Cashy.Services.DebtJsonService DebtService
+
+@using System.Linq
+@using Cashy.Model
+
+<h3>Dashboard</h3>
+
+<div style="display: flex; justify-content: space-between; gap: 20px;">
+    <!-- Left Container -->
+    <div style="flex: 1; border: 1px solid black; background-color: #333; color: white; padding: 10px; box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);">
+        <h4>Total Number of Transactions: @totalTransactions</h4>
+        <h4>Net Total (Inflows + Debts - Outflows): @netTotal</h4>
+    </div>
+
+    <!-- Right Container -->
+    <div style="flex: 1; border: 1px solid black; background-color: #333; color: white; padding: 10px; box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);">
+        <h4>Total Inflows: @totalInflows</h4>
+        <h4>Total Outflows: @totalOutflows</h4>
+        <h4>Total Debt: @totalDebt</h4>
+        <h4>Cleared Debt: @clearedDebt</h4>
+        <h4>Remaining Debt: @remainingDebt</h4>
+    </div>
+
+    <!--More container-->
+    <div>
+        <h4>Highest Inflow: @highestInflow?.Amount (Title: @highestInflow?.Title)</h4>
+        <h4>Lowest Inflow: @lowestInflow?.Amount (Title: @lowestInflow?.Title)</h4>
+        <h4>Highest Outflow: @highestOutflow?.Amount (Title: @highestOutflow?.Title)</h4>
+        <h4>Lowest Outflow: @lowestOutflow?.Amount (Title: @lowestOutflow?.Title)</h4>
+        <h4>Highest Debt: @highestDebt?.Amount (Title: @highestDebt?.Title)</h4>
+        <h4>Lowest Debt: @lowestDebt?.Amount (Title: @lowestDebt?.Title)</h4>
+    </div>
+
+    <!-- Pending Debts -->
+    <div>
+        <h4>Pending Debts:</h4>
+        <table>
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Note</th>
+                    <th>Amount</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (pendingDebts != null && pendingDebts.Any())
+                {
+                    @foreach (var debt in pendingDebts)
+                    {
+                        <tr>
+                            <td>@debt.Title</td>
+                            <td>@debt.Note</td>
+                            <td>@debt.Amount</td>
+                            <td>@debt.Date.ToString("yyyy-MM-dd")</td>
+                        </tr>
+                    }
+                }
+                else
+                {
+                    <tr>
+                        <td colspan="4">No pending debts found.</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+    <!--filter by data-->
+    <div>
+        <label for="startDate">Start Date:</label>
+        <input type="date" id="startDate" @bind="startDate" />
+
+        <label for="endDate">End Date:</label>
+        <input type="date" id="endDate" @bind="endDate" />
+
+        <button @onclick="FilterByDateRange">Filter</button>
+    </div>
+    <!-- Filter and Reset -->
+    <div>
+        <button @onclick="ClearFilter">Clear Filter</button>
+    </div>
+</div>
+
+
+
+
+@code {
+    private List<Cashy.Model.Transaction> transactions;
+    private List<Cashy.Model.Debt> debts;
+    private List<Cashy.Model.Debt> pendingDebts;
+    private List<Cashy.Model.Debt> filteredDebts;
+    private DateTime? startDate;
+    private DateTime? endDate;
+
+    private int totalTransactions;
+    private decimal totalInflows;
+    private decimal totalOutflows;
+    private decimal totalDebt;
+    private decimal clearedDebt;
+    private decimal remainingDebt;
+    private decimal netTotal;
+
+    private Cashy.Model.Transaction highestInflow;
+    private Cashy.Model.Transaction lowestInflow;
+    private Cashy.Model.Transaction highestOutflow;
+    private Cashy.Model.Transaction lowestOutflow;
+    private Cashy.Model.Debt highestDebt;
+    private Cashy.Model.Debt lowestDebt;
+
+
+
+    protected override async Task OnInitializedAsync()
+    {
+        // Load transactions from the JsonService
+        transactions = await JsonService.ReadDataAsync<List<Cashy.Model.Transaction>>();
+
+        // Load debts from the DebtService
+        debts = await DebtService.ReadDataAsync<List<Cashy.Model.Debt>>();
+
+        if (transactions != null && transactions.Any())
+        {
+            // Calculate the total number of transactions
+            totalTransactions = transactions.Count;
+
+            // Calculate the individual categories
+            totalInflows = CalculateTotalInflows(transactions);
+            totalOutflows = CalculateTotalOutflows(transactions);
+
+            // Calculate highest and lowest inflows
+            highestInflow = transactions
+                .Where(t => t.Type == "Cashin")
+                .OrderByDescending(t => t.Amount)
+                .FirstOrDefault();
+
+            lowestInflow = transactions
+                .Where(t => t.Type == "Cashin")
+                .OrderBy(t => t.Amount)
+                .FirstOrDefault();
+
+            // Calculate highest and lowest outflows
+            highestOutflow = transactions
+                .Where(t => t.Type == "Cashout")
+                .OrderByDescending(t => t.Amount)
+                .FirstOrDefault();
+
+            lowestOutflow = transactions
+                .Where(t => t.Type == "Cashout")
+                .OrderBy(t => t.Amount)
+                .FirstOrDefault();
+        }
+
+        if (debts != null && debts.Any())
+        {
+            // Calculate the total debt and cleared debt from the Debt model
+            totalDebt = CalculateTotalDebt(debts);
+            clearedDebt = CalculateClearedDebt(debts);
+            remainingDebt = totalDebt - clearedDebt;
+
+            // Calculate highest and lowest debts
+            highestDebt = debts.OrderByDescending(d => d.Amount).FirstOrDefault();
+            lowestDebt = debts.OrderBy(d => d.Amount).FirstOrDefault();
+
+            // Get the list of pending debts
+            pendingDebts = debts.Where(d => !d.Status).ToList();
+        }
+
+        // Calculate the net total (Inflows + Debts - Outflows)
+        netTotal = totalInflows + totalDebt - totalOutflows;
+    }
+
+    private decimal CalculateTotalInflows(List<Cashy.Model.Transaction> transactions)
+    {
+        decimal inflows = 0;
+        foreach (var transaction in transactions)
+        {
+            if (transaction.Type == "Cashin") // Inflows
+            {
+                inflows += transaction.Amount;
+            }
+        }
+        return inflows;
+    }
+
+    private decimal CalculateTotalOutflows(List<Cashy.Model.Transaction> transactions)
+    {
+        decimal outflows = 0;
+        foreach (var transaction in transactions)
+        {
+            if (transaction.Type == "Cashout") // Outflows
+            {
+                outflows += transaction.Amount;
+            }
+        }
+        return outflows;
+    }
+
+    private decimal CalculateTotalDebt(List<Cashy.Model.Debt> debts)
+    {
+        decimal debt = 0;
+        foreach (var debtRecord in debts)
+        {
+            if (!debtRecord.Status) // Consider only unpaid debts
+            {
+                debt += debtRecord.Amount;
+            }
+        }
+        return debt;
+    }
+
+    private decimal CalculateClearedDebt(List<Cashy.Model.Debt> debts)
+    {
+        decimal cleared = 0;
+        foreach (var debtRecord in debts)
+        {
+            if (debtRecord.Status) // Consider only cleared debts
+            {
+                cleared += debtRecord.Amount;
+            }
+        }
+        return cleared;
+    }
+
+    // filtering logic 
+    private void FilterByDateRange()
+    {
+        // Filter transactions by date range
+        var filteredTransactions = transactions
+            ?.Where(t => (!startDate.HasValue || t.Date >= startDate) && (!endDate.HasValue || t.Date <= endDate))
+            .ToList();
+
+        // Update filtered debts
+        var filteredPendingDebt = pendingDebts
+        ?.Where(d => (!startDate.HasValue || d.Date >= startDate) && (!endDate.HasValue || d.Date <= endDate))
+        .ToList();
+
+        // Update pendingDebt with filtered results
+        pendingDebts = filteredPendingDebt;
+
+        // Calculate highest/lowest inflow and outflow
+        highestInflow = filteredTransactions?.Where(t => t.Type == "Cashin").OrderByDescending(t => t.Amount).FirstOrDefault();
+        lowestInflow = filteredTransactions?.Where(t => t.Type == "Cashin").OrderBy(t => t.Amount).FirstOrDefault();
+
+        highestOutflow = filteredTransactions?.Where(t => t.Type == "Cashout").OrderByDescending(t => t.Amount).FirstOrDefault();
+        lowestOutflow = filteredTransactions?.Where(t => t.Type == "Cashout").OrderBy(t => t.Amount).FirstOrDefault();
+
+        // Calculate highest/lowest debt
+        highestDebt = filteredDebts?.OrderByDescending(d => d.Amount).FirstOrDefault();
+        lowestDebt = filteredDebts?.OrderBy(d => d.Amount).FirstOrDefault();
+
+        // Recalculate totals
+        totalTransactions = filteredTransactions?.Count ?? 0;
+        totalInflows = filteredTransactions?.Where(t => t.Type == "Cashin").Sum(t => t.Amount) ?? 0;
+        totalOutflows = filteredTransactions?.Where(t => t.Type == "Cashout").Sum(t => t.Amount) ?? 0;
+
+        totalDebt = filteredDebts?.Sum(d => d.Amount) ?? 0;
+        clearedDebt = debts?.Where(d => d.Status && (!startDate.HasValue || d.Date >= startDate) && (!endDate.HasValue || d.Date <= endDate)).Sum(d => d.Amount) ?? 0;
+
+        remainingDebt = totalDebt - clearedDebt;
+        netTotal = totalInflows + totalDebt - totalOutflows;
+    }
+    // clear filter 
+    private void ClearFilter()
+    {
+        // Reset the date range filters
+        startDate = null;
+        endDate = null;
+
+        // Restore the original data
+        pendingDebts = debts.Where(d => !d.Status).ToList();
+        filteredDebts = null; // Clear any existing filtered debts
+
+        // Recalculate totals and properties from original data
+        totalTransactions = transactions?.Count ?? 0;
+        totalInflows = CalculateTotalInflows(transactions);
+        totalOutflows = CalculateTotalOutflows(transactions);
+
+        highestInflow = transactions?.Where(t => t.Type == "Cashin").OrderByDescending(t => t.Amount).FirstOrDefault();
+        lowestInflow = transactions?.Where(t => t.Type == "Cashin").OrderBy(t => t.Amount).FirstOrDefault();
+
+        highestOutflow = transactions?.Where(t => t.Type == "Cashout").OrderByDescending(t => t.Amount).FirstOrDefault();
+        lowestOutflow = transactions?.Where(t => t.Type == "Cashout").OrderBy(t => t.Amount).FirstOrDefault();
+
+        totalDebt = CalculateTotalDebt(debts);
+        clearedDebt = CalculateClearedDebt(debts);
+        remainingDebt = totalDebt - clearedDebt;
+
+        highestDebt = debts.OrderByDescending(d => d.Amount).FirstOrDefault();
+        lowestDebt = debts.OrderBy(d => d.Amount).FirstOrDefault();
+
+        netTotal = totalInflows + totalDebt - totalOutflows;
+    }
+
+
+}
+

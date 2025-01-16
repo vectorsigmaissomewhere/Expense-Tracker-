@@ -1,0 +1,54 @@
+﻿@using Cashy.Model
+@inject Cashy.Services.JsonService JsonService
+
+<h3>All Transactions</h3>
+
+@if (transactions == null)
+{
+    <p>Loading...</p>
+}
+else if (transactions.Count == 0)
+{
+    <p>No transactions found.</p>
+}
+else
+{
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>TransactionId</th>
+                <th>Title</th>
+                <th>Amount</th>
+                <th>Type</th>
+                <th>Date</th>
+                <th>Tags</th>
+                <th>Note</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var transaction in transactions)
+            {
+                <tr>
+                    <td>@transaction.TransactionId</td>
+                    <td>@transaction.Title</td>
+                    <td>@transaction.Amount</td>
+                    <td>@transaction.Type</td>
+                    <td>@transaction.Date.ToString("yyyy-MM-dd")</td>
+                    <td>@string.Join(", ", transaction.Tags ?? new List<string>())</td>
+                    <td>@transaction.Note</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    private List<Transaction> transactions;
+
+    protected override async Task OnInitializedAsync()
+    {
+        // Load transactions from the JSON file
+        transactions = await JsonService.ReadDataAsync<List<Transaction>>() ?? new List<Transaction>();
+    }
+}
+

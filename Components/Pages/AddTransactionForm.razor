@@ -1,0 +1,95 @@
+﻿@using Cashy.Model
+@inject Cashy.Services.JsonService JsonService
+@inject Cashy.Services.BalanceJsonService BalanceJsonService
+@inject IJSRuntime JSRuntime
+
+
+<EditForm Model="Transaction" OnValidSubmit="HandleSubmit">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+
+    <div>
+        <label>Title</label>
+        <InputText @bind-Value="Transaction.Title" class="form-control" />
+    </div>
+
+    <div>
+        <label>Amount</label>
+        <InputNumber @bind-Value="Transaction.Amount" class="form-control" />
+    </div>
+
+    <div>
+        <label>Type</label>
+        <InputSelect @bind-Value="Transaction.Type" class="form-control">
+            <option value="Cashin">Cashin</option>
+            <option value="Cashout">Cashout</option>
+        </InputSelect>
+    </div>
+
+    <div>
+        <label>Tags (comma-separated)</label>
+        <InputText @bind-Value="TagsInput" class="form-control" />
+    </div>
+
+    <div>
+        <label>Date</label>
+        <InputDate @bind-Value="Transaction.Date" class="form-control" />
+    </div>
+
+    <div>
+        <label>Note</label>
+        <InputTextArea @bind-Value="Transaction.Note" class="form-control" />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Add Transaction</button>
+</EditForm>
+
+@code {
+    private Transaction Transaction { get; set; } = new Transaction { UserId = 1, Type = "Cashin", Date = DateTime.Now };
+    private string TagsInput { get; set; }
+
+    private async Task HandleSubmit()
+    {
+        // Parse tags
+        Transaction.Tags = TagsInput?.Split(',')
+                                    .Select(tag => tag.Trim())
+                                    .Where(tag => !string.IsNullOrEmpty(tag))
+                                    .ToList();
+
+        var currentBalance = await BalanceJsonService.GetBalanceAsync();
+
+        if (Transaction.Type == "Cashout" && Transaction.Amount > currentBalance)
+        {
+            // Show a potential message for insufficient balance
+            await ShowErrorMessage("Insufficient balance for this transaction.");
+            return;
+        }
+
+        if (Transaction.Type == "Cashin")
+        {
+            currentBalance += Transaction.Amount;
+        }
+        else if (Transaction.Type == "Cashout")
+        {
+            currentBalance -= Transaction.Amount;
+        }
+
+        // Update balance
+        await BalanceJsonService.UpdateBalanceAsync(currentBalance);
+
+        // Save transaction
+        var transactions = await JsonService.ReadDataAsync<List<Transaction>>() ?? new List<Transaction>();
+        Transaction.TransactionId = transactions.Any() ? transactions.Max(t => t.TransactionId) + 1 : 1;
+        transactions.Add(Transaction);
+        await JsonService.WriteDataAsync(transactions);
+
+        // Reset the form
+        Transaction = new Transaction { UserId = 1, Date = DateTime.Now };
+        TagsInput = string.Empty;
+    }
+
+    private async Task ShowErrorMessage(string message)
+    {
+        await JSRuntime.InvokeVoidAsync("showAlert", message);
+    }
+}

@@ -1,0 +1,16 @@
+[
+  {
+    "TransactionId": 0,
+    "Type": "Cashout",
+    "Tags": [
+      "grocery",
+      "expenses"
+    ],
+    "Note": "this is it ",
+    "Date": "2005-01-01T00:00:00",
+    "Title": "Bought some grocery ",
+    "Amount": 100,
+    "Labels": null,
+    "UserId": 1
+  }
+]

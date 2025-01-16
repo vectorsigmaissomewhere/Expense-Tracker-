@@ -1,0 +1,96 @@
+﻿@using Cashy.Model
+@inject Cashy.Services.DebtJsonService DebtJsonService
+@inject Cashy.Services.BalanceJsonService BalanceJsonService
+
+<h3>All Debts</h3>
+
+@if (debts == null)
+{
+    <p><em>Loading...</em></p>
+}
+else if (debts.Any())
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Title</th>
+                <th>Amount</th>
+                <th>Status</th>
+                <th>Date</th>
+                <th>Note</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var debt in debts)
+            {
+                <tr>
+                    <td>@debt.Id</td>
+                    <td>@debt.Title</td>
+                    <td>@debt.Amount</td>
+                    <td>@(debt.Status ? "Paid" : "Pending")</td>
+                    <td>@debt.Date.ToString("yyyy-MM-dd")</td>
+                    <td>@debt.Note</td>
+                    <td>
+                        <button class="btn btn-primary" @onclick="() => MarkAsPaid(debt)" disabled="@(debt.Status)">Mark as Paid</button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>No debts found.</p>
+}
+
+@code {
+    private List<Debt> debts;
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            // Load debts from the JSON file
+            debts = await DebtJsonService.ReadDataAsync<List<Debt>>() ?? new List<Debt>();
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error reading debts: {ex.Message}");
+            debts = new List<Debt>();
+        }
+    }
+
+    private async Task MarkAsPaid(Debt debt)
+    {
+        try
+        {
+            // Get the current balance
+            var balance = await BalanceJsonService.GetBalanceAsync();
+
+            if (balance >= debt.Amount)
+            {
+                // Deduct the debt amount from the balance
+                await BalanceJsonService.UpdateBalanceAsync(balance - debt.Amount);
+
+                // Update the debt status to Paid
+                debt.Status = true;
+
+                // Save the updated debts to the JSON file
+                await DebtJsonService.WriteDataAsync(debts);
+
+                Console.WriteLine($"Debt {debt.Id} marked as Paid.");
+            }
+            else
+            {
+                // Notify the user that the balance is insufficient
+                Console.WriteLine($"Insufficient balance to pay debt {debt.Id}.");
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error updating debt status: {ex.Message}");
+        }
+    }
+}

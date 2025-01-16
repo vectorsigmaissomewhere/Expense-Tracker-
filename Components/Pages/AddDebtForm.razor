@@ -1,0 +1,52 @@
+﻿@using Cashy.Model
+@inject Cashy.Services.DebtJsonService DebtJsonService
+<h3>Add a Debt</h3>
+
+<EditForm Model="Debt" OnValidSubmit="HandleSubmit">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+
+    <div>
+        <label>Title</label>
+        <InputText @bind-Value="Debt.Title" class="form-control" />
+    </div>
+
+    <div>
+        <label>Amount</label>
+        <InputNumber @bind-Value="Debt.Amount" class="form-control" />
+    </div>
+
+    <div>
+        <label>Status</label>
+        <InputSelect @bind-Value="Debt.Status" class="form-control">
+            <option value="true">Paid</option>
+            <option value="false">Unpaid</option>
+        </InputSelect>
+    </div>
+
+    <div>
+        <label>Date</label>
+        <InputDate @bind-Value="Debt.Date" class="form-control" />
+    </div>
+
+    <div>
+        <label>Note</label>
+        <InputTextArea @bind-Value="Debt.Note" class="form-control" />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Add Debt</button>
+</EditForm>
+
+@code {
+    private Debt Debt { get; set; } = new Debt { UserId = 1 };
+
+    private async Task HandleSubmit()
+    {
+        var debts = await DebtJsonService.ReadDataAsync<List<Debt>>() ?? new List<Debt>();
+        Debt.Id = debts.Any() ? debts.Max(d => d.Id) + 1 : 1;
+        debts.Add(Debt);
+        await DebtJsonService.WriteDataAsync(debts);
+        Debt = new Debt { UserId = 1 }; // Reset the form
+    }
+
+}
